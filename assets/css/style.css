@@ -241,9 +241,6 @@ h6 {
   color: #fff;
 }
 
-.switch-btn:focus {
-  color: #fff;
-}
 
 @media (max-width: 992px) {
   .switch-btn {
