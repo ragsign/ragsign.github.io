@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="lang-en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,118 +25,163 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: TheEvent
-  * Updated: Feb 06 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .lang-en {
+      display: block;
+    }
+    .lang-zh {
+      display: none;
+    }
+  </style>
+
+  <script>
+
+    function switchLang() {
+      var enElements = document.querySelectorAll('.lang-en');
+      var zhElements = document.querySelectorAll('.lang-zh');
+      var switchButton = document.getElementById('switch-lang-btn');
+
+      enElements.forEach(function(el) {
+        if (el.style.display === 'none') {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      zhElements.forEach(function(el) {
+        if (el.style.display === 'block') {
+          el.style.display = 'none';
+        } else {
+          el.style.display = 'block';
+        }
+      });
+
+      if (switchButton.innerText === '中文') {
+        switchButton.innerText = 'English';
+      } else {
+        switchButton.innerText = '中文';
+      }
+    }
+  </script>
 </head>
 
 <body>
 
+
 <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center ">
   <div class="container-fluid container-xxl d-flex align-items-center">
-
     <div id="logo" class="me-auto">
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
-      <h1><a href="index.html" class="scrollto">ICTRM</a> <span>2024</span></h1>
-
+      <h1 class="lang-en"><a href="index.html" class="scrollto">ICTRM</a> <span>2024</span></h1>
+      <h1 class="lang-zh"><a href="index.html" class="scrollto">ICTRM</a> <span>2024</span></h1>
     </div>
-
+    <!-- Language Switch Button -->
     <nav id="navbar" class="navbar order-last order-lg-0">
-
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#featured-services">Topics</a></li>
-        <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-        <li><a class="nav-link scrollto" href="#guidelines">Guideline</a></li>
-        <li><a class="nav-link scrollto" href="#speakers">Organizers</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Venue</a></li>
-        <li><a class="nav-link scrollto" href="#hotels">Restaurants</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#hero" style="display:block">Home</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#about" style="display:block">About</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#featured-services" style="display:block">Topics</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#schedule" style="display:block">Schedule</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#guidelines" style="display:block">Guidelines</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#speakers" style="display:block">Organizers</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#contact" style="display:block">Venue</a></li>
+        <li><a class="nav-link scrollto lang-en" href="#hotels" style="display:block">Restaurants</a></li>
 
+        <li><a class="nav-link scrollto lang-zh" href="#hero"  style="display:none">首页</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#about"  style="display:none">关于</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#featured-services"  style="display:none">主题</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#schedule"  style="display:none">日程安排</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#guidelines"  style="display:none">指南</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#speakers"  style="display:none">组织者</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#contact" style="display:none">地点</a></li>
+        <li><a class="nav-link scrollto lang-zh" href="#hotels"  style="display:none">餐馆</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-    <!--a class="buy-tickets scrollto" href="#about">Get Started</a> -->
-    <a class="buy-tickets scrollto" href="/2025">Go to ICTRM 2025</a>
-
+    <a class="buy-tickets scrollto lang-en" href="/2025">Go to ICTRM 2025</a>
+    <a class="buy-tickets scrollto lang-zh" href="/2025">前往 ICTRM 2025</a>
+    <button id="switch-lang-btn" type="button" class="switch-btn" onclick="switchLang()">中文</button>
   </div>
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-    <h1 class="mb-4 pb-0">International Symposium ON <br>  <span>TRANSPORTATION RESILIENCE</span> <br>  AND <span>EMERGENCY Management</span> <br> <span>2024</span></h1>
-    <p class="mb-4 pb-0">8-11 July, 2024, Beihang University, Beijing</p>
+    <h1 class="mb-4 pb-0 lang-en">International Conference on <br> <span>Transportation Resilience</span> <br> and <span>Emergency Management</span> <br> <span>2024</span></h1>
+    <h1 class="mb-4 pb-0 lang-zh"><span>交 通 韧 性 和 应 急 管 理</span> <br> 国 际 研 讨 会 <br> <span>2024</span></h1>
+    <p class="mb-4 pb-0 lang-en">8-11 July, 2024, Beihang University, Beijing</p>
+    <p class="mb-4 pb-0 lang-zh">2024年7月8-11日，北京航空航天大学，北京</p>
     <div class="play-btn mb-4"><img src="assets/img/logo1.png" alt="" class="img-fluid"></div>
-
-    <a href="#about" class="about-btn scrollto">About The Conference</a>
+    <a href="#about" class="about-btn scrollto lang-en">About The Conference</a>
+    <a href="#about" class="about-btn scrollto lang-zh">关于会议</a>
   </div>
 </section><!-- End Hero Section -->
 
 <main id="main">
-
   <!-- ======= About Section ======= -->
   <section id="about">
     <div class="container position-relative" data-aos="fade-up">
       <div class="row">
         <div class="col-lg-8">
-          <h2>About The Conference</h2>
-          <p>The conference will explore and address the challenges, strategies,
-            and innovations to promote the resilience of transportation systems worldwide.
-            <br>
-            With a particular emphasis on emergency management in the transportation sector,
-            this event seeks will bring together experts and thought leaders to share insights,
-            research findings, and best practices. </p>
+          <h2 class="lang-en">About The Conference</h2>
+          <h2 class="lang-zh">关于会议</h2>
+          <p class="lang-en">The conference will explore and address challenges, strategies, and innovations for enhancing transportation system resilience worldwide. <br> With a special focus on emergency management in the transportation sector, this conference brings together experts and thought leaders to share insights, research findings, and best practices.</p>
+          <p class="lang-zh">会议将探讨和解决全球交通系统韧性的挑战、策略和创新,  <br> 其中交通部门的应急管理将得到特别的关注。<br> 本次会议将汇集相关领域的专家，一同分享见解、研究成果和最佳实践。</p>
         </div>
         <div class="col-lg-2">
-          <h2>Where</h2>
-          <p> Vision international Culture Exchange Center<br>Beihang University,<br> Beijing</p>
+          <h2 class="lang-en">Where</h2>
+          <h2 class="lang-zh">地点</h2>
+          <p class="lang-en">Vision International Cultural Exchange Center<br>Beihang University,<br> Beijing</p>
+          <p class="lang-zh">唯实国际文化交流中心<br>北京航空航天大学,<br> 北京</p>
         </div>
         <div class="col-lg-2">
-          <h2>When</h2>
-          <p>Sunday to Thursday<br>8-11 July 2024</p> 
+          <h2 class="lang-en">When</h2>
+          <h2 class="lang-zh">时间</h2>
+          <p class="lang-en">Sunday to Wednesday<br>8-11 June 2024</p>
+          <p class="lang-zh">周日至周三<br>2024年7月8-11日</p>
         </div>
       </div>
     </div>
   </section><!-- End About Section -->
 
-
   <!-- ======= Featured Services Section ======= -->
   <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Conference Topics</h2>
-        <p>include, but will not be limited to the following themes: </p>
+        <h2 class="lang-en">Conference Topics</h2>
+        <h2 class="lang-zh">会议主题</h2>
+        <p class="lang-en">include, but will not be limited to the following themes:</p>
+        <p class="lang-zh">包括但不限于以下主题：</p>
       </div>
       <div class="row topic-box">
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4 class="title"><a href="">Resilience Strategies For Transportation Networks</a></h4>
-            <p class="description">Resilience strategies for transportation networks are aimed at enhancing the ability of transportation systems to withstand and rapidly recover from disruptive events such as natural disasters, accidents, or even cyber-attacks. <br> These strategies involve a combination of planning, engineering, and operational solutions designed to minimize the impact on mobility, safety, and economic activities.</p>
+            <h4 class="title lang-en"><a href="">Resilience Strategies For Transportation Networks</a></h4>
+            <h4 class="title lang-zh"><a href="">交通网络韧性策略</a></h4>
+            <p class="description lang-en">Resilience strategies for transportation networks are aimed at enhancing the ability of transportation systems to withstand and rapidly recover from disruptive events such as natural disasters, accidents, or even cyber-attacks. These strategies involve a combination of planning, engineering, and operational solutions designed to minimize the impact on mobility, safety, and economic activities.</p>
+            <p class="description lang-zh">交通网络韧性策略旨在增强交通系统在自然灾害、事故甚至网络攻击等破坏性事件中的承受能力和快速恢复能力。这些策略包括规划、工程和运营解决方案的组合，旨在最大限度地减少对出行、安全和经济活动的影响。</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4 class="title"><a href="">Risk Assessment And Management in Transport Networks </a></h4>
-            <p class="description">Risk Assessment and Management in transport networks is a critical and systematic process aimed at identifying potential hazards, analyzing and evaluating risks associated with transportation activities, and implementing strategies to mitigate these risks to ensure the safety and efficiency of the transport system. </p>
+            <h4 class="title lang-en"><a href="">Risk Assessment And Management in Transport Networks</a></h4>
+            <h4 class="title lang-zh"><a href="">交通网络中的风险评估与管理</a></h4>
+            <p class="description lang-en">Risk Assessment and Management in transport networks is a critical and systematic process aimed at identifying potential hazards, analyzing and evaluating risks associated with transportation activities, and implementing strategies to mitigate these risks to ensure the safety and efficiency of the transport system.</p>
+            <p class="description lang-zh">交通网络中的风险评估与管理是一项关键且系统的过程，旨在识别潜在危害，分析和评估与交通活动相关的风险，并实施策略以减轻这些风险，确保交通系统的安全和效率。</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4 class="title"><a href="">Human Factors in Emergency Management</a></h4>
-            <p class="description">Human factors encompasses the study of how people's abilities, limitations, behaviors, and psychological considerations can affect their performance within emergencies, particularly in transportation contexts. By considering Human factors such as stress, fatigue, cognitive load, communication dynamics, and situational awareness, emergency management can be tailored to mitigate human error and enhance the effective response to unexpected events, ultimately ensuring the safety of passengers and the resilience of transportation systems.
-            </p>
+            <h4 class="title lang-en"><a href="">Human Factors in Emergency Management</a></h4>
+            <h4 class="title lang-zh"><a href="">应急管理中的人因因素</a></h4>
+            <p class="description lang-en">Human factors encompasses the study of how people's abilities, limitations, behaviors, and psychological considerations can affect their performance within emergencies, particularly in transportation contexts. By considering Human factors such as stress, fatigue, cognitive load, communication dynamics, and situational awareness, emergency management can be tailored to mitigate human error and enhance the effective response to unexpected events, ultimately ensuring the safety of passengers and the resilience of transportation systems.</p>
+            <p class="description lang-zh">人因因素包括研究人在应急情况下，特别是在交通环境中的能力、局限性、行为和心理考虑如何影响他们的表现。通过考虑压力、疲劳、认知负荷、沟通动态和情境意识等人因因素，应急管理可以量身定制以减少人为错误并增强对突发事件的有效响应，最终确保乘客的安全和交通系统的韧性。</p>
           </div>
         </div>
       </div>
@@ -145,54 +189,58 @@
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bx bx-world"></i></div>
-            <h4 class="title"><a href="">Technological Innovations for Resilient Emergency Response</a></h4>
-            <p class="description">Technological innovations for resilient emergency response refer to the cutting-edge advancements and application of technology designed to improve the efficiency, reliability, and effectiveness of services during crises. In the realm of transportation, this includes the development and deployment of robust communication systems, unmanned aerial vehicles (UAVs) for rapid assessment and delivery, real-time data analytics for traffic management, and smart infrastructure.These technologies facilitate the swift and strategic movement of first responders, aid in the evacuation of affected populations, and ensure the continuity of supply chains.</p>
+            <h4 class="title lang-en"><a href="">Technological Innovations for Resilient Emergency Response</a></h4>
+            <h4 class="title lang-zh"><a href="">韧性应急响应的技术创新</a></h4>
+            <p class="description lang-en">Technological innovations for resilient emergency response refer to the cutting-edge advancements and application of technology designed to improve the efficiency, reliability, and effectiveness of services during crises. In the realm of transportation, this includes the development and deployment of robust communication systems, unmanned aerial vehicles (UAVs) for rapid assessment and delivery, real-time data analytics for traffic management, and smart infrastructure. These technologies facilitate the swift and strategic movement of first responders, aid in the evacuation of affected populations, and ensure the continuity of supply chains.</p>
+            <p class="description lang-zh">韧性应急响应的技术创新是指旨在提高危机期间服务效率、可靠性和有效性的前沿技术进展和应用。在交通领域，这包括开发和部署可靠的通信系统、用于快速评估和交付的无人机（UAV）、用于交通管理的实时数据分析和智能基础设施。这些技术促进了急救人员的快速和战略性移动，帮助疏散受影响的人群，并确保供应链的连续性。</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bx bx-world"></i></div>
-            <h4 class="title"><a href="">Crisis Communication and Public Awareness</a></h4>
-            <p class="description">Crisis Communication and Public Awareness refers to the strategic and concerted efforts made by transportation authorities and operators to inform and guide the public during critical incidents such as accidents, natural disasters, or system malfunctions. Crisis communication is the structured effort to disseminate information that can assist in preventing, responding to, and recovering from disruptions, while simultaneously maintaining public trust and ensuring safety. Public awareness is a proactive component, aiming to educate the masses about potential risks and the measures in place to handle such situations.</p>
+            <h4 class="title lang-en"><a href="">Crisis Communication and Public Awareness</a></h4>
+            <h4 class="title lang-zh"><a href="">危机沟通与公众意识</a></h4>
+            <p class="description lang-en">Crisis Communication and Public Awareness refers to the strategic and concerted efforts made by transportation authorities and operators to inform and guide the public during critical incidents such as accidents, natural disasters, or system malfunctions. Crisis communication is the structured effort to disseminate information that can assist in preventing, responding to, and recovering from disruptions, while simultaneously maintaining public trust and ensuring safety. Public awareness is a proactive component, aiming to educate the masses about potential risks and the measures in place to handle such situations.</p>
+            <p class="description lang-zh">危机沟通与公众意识是指交通当局和运营商在事故、自然灾害或系统故障等关键事件期间向公众提供信息和指导的战略性和协调一致的努力。危机沟通是传播信息的结构化努力，可以帮助预防、应对和从中恢复中断，同时保持公众信任并确保安全。公众意识是一个主动的组成部分，旨在教育大众了解潜在风险以及应对这些情况的措施。</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bx bx-world"></i></div>
-            <h4 class="title"><a href="">Infrastructure Planning and Design for Resilience</a></h4>
-            <p class="description">Infrastructure planning and design for resilience refers to the strategic approach of creating transportation networks and systems that are robust, flexible, and sustainable in the face of various challenges, including natural disasters, climate change, and human-induced disruptions. This concept involves the thorough assessment of potential risks and vulnerabilities that infrastructure may face over its lifespan and the integration of mitigation measures to ensure that it can resist, absorb, or recover quickly from adverse events. Incorporating resilience into transportation projects promotes adaptability, and ensures continuity of service.</p>
+            <h4 class="title lang-en"><a href="">Infrastructure Planning and Design for Resilience</a></h4>
+            <h4 class="title lang-zh"><a href="">韧性基础设施规划与设计</a></h4>
+            <p class="description lang-en">Infrastructure planning and design for resilience refers to the strategic approach of creating transportation networks and systems that are robust, flexible, and sustainable in the face of various challenges, including natural disasters, climate change, and human-induced disruptions. This concept involves the thorough assessment of potential risks and vulnerabilities that infrastructure may face over its lifespan and the integration of mitigation measures to ensure that it can resist, absorb, or recover quickly from adverse events. Incorporating resilience into transportation projects promotes adaptability, and ensures continuity of service.</p>
+            <p class="description lang-zh">韧性基础设施规划与设计是指在面对自然灾害、气候变化和人为干扰等各种挑战时，创建强大、灵活和可持续的交通网络和系统的战略方法。这个概念包括对基础设施在其生命周期内可能面临的潜在风险和漏洞的全面评估，并整合减缓措施，以确保其能够抵御、吸收或快速从不利事件中恢复。在交通项目中融入韧性促进适应性并确保服务的连续性。</p>
           </div>
         </div>
-
       </div>
-
     </div>
   </section><!-- End Featured Services Section -->
 
-
-  <!-- ======= Services Section ======= -->
-
-
+  <!-- Add more sections as needed -->
   <!-- ======= Schedule Section ======= -->
   <section id="schedule" class="section-with-bg">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Conference Schedule</h2>
-        <p>Uniting the fields of transportation resilience and emergency management to advance and improve traffic planning, management, and engineering to accommodate the needs of all people before, during and after emergencies.
-        </p>
+        <h2 class="lang-en">Conference Schedule</h2>
+        <h2 class="lang-zh">会议日程</h2>
+        <p class="lang-en">Uniting the fields of transportation resilience and emergency management to advance and improve traffic planning, management, and engineering to accommodate the needs of all people before, during and after emergencies.</p>
+        <p class="lang-zh">联合交通韧性和应急管理领域，推动和改进交通规划、管理和工程，以满足所有人在紧急情况前、期间和之后的需求。</p>
       </div>
 
       <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
         <li class="nav-item">
-          <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Day 1, Jul 8th</a>
+          <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab"><span class="lang-en">Day 1, Jul 8th</span><span class="lang-zh">第一天，7月8日</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Day 2, Jul 9th</a>
+          <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab"><span class="lang-en">Day 2, Jul 9th</span><span class="lang-zh">第二天, 7月9日</span></a>
+
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Additional Activities</a>
+          <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab"><span class="lang-en">Additional Activities</span><span class="lang-zh">额外活动</span></a>
+
         </li>
       </ul>
 
@@ -204,398 +252,434 @@
             <div class="col-md-10 mx-auto">
               <!-- Timeline -->
               <div class="topic-header">
-                <h2>Morning Topic: The Present, Past and Future of Transportation Resilience</h2>
+                <h2 class="lang-en">Morning Topic: The Present, Past and Future of Transportation Resilience</h2>
+                <h2 class="lang-zh">上午主题: 交通韧性的过去、现在和未来</h2>
               </div>
               <div class="timeline timeline-one">
                 <!-- Timeline Item 1 -->
                 <div class="timeline-item schedule-item" data-aos-delay="300">
-                  <h5 class="my-3">08:30 - 09:00</h5>
-                  <p>Opening Ceremony</p>
+                  <h5 class="my-3 lang-en">08:30 - 09:00</h5>
+                  <h5 class="my-3 lang-zh">08:30 - 09:00</h5>
+                  <p class="lang-en">Opening Ceremony</p>
+                  <p class="lang-zh">开幕式</p>
                 </div>
                 <!-- Timeline Item 2 -->
                 <div class="timeline-item schedule-item" data-aos-delay="400">
-                  <h5 class="my-3">09:00 - 09:30</h5>
-                  <p>Keynote Speaking - Invited Professor 1</p>
+                  <h5 class="my-3 lang-en">09:00 - 09:30</h5>
+                  <h5 class="my-3 lang-zh">09:00 - 09:30</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 1</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 1</p>
                 </div>
                 <!-- Timeline Item 3 -->
-
                 <div class="timeline-item schedule-item" data-aos-delay="500">
-                  <h5 class="my-3">09:30 - 10:00</h5>
-                  <p>Keynote Speaking - Invited Professor 2</p>
+                  <h5 class="my-3 lang-en">09:30 - 10:00</h5>
+                  <h5 class="my-3 lang-zh">09:30 - 10:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 2</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 2</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="600">
-                  <h5 class="my-3">10:00 - 10:15</h5>
-                  <p>Tea Break</p>
+                  <h5 class="my-3 lang-en">10:00 - 10:15</h5>
+                  <h5 class="my-3 lang-zh">10:00 - 10:15</h5>
+                  <p class="lang-en">Tea Break</p>
+                  <p class="lang-zh">茶歇</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="700">
-                  <h5 class="my-3">10:15 - 11:00</h5>
-                  <p>Roundtable Discussion: The Present, Past and Future of Transport Resilience</p>
+                  <h5 class="my-3 lang-en">10:15 - 11:00</h5>
+                  <h5 class="my-3 lang-zh">10:15 - 11:00</h5>
+                  <p class="lang-en">Roundtable Discussion: The Present, Past and Future of Transport Resilience</p>
+                  <p class="lang-zh">圆桌讨论: 交通韧性的过去、现在和未来</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="800">
-                  <h5 class="my-3">11:00 - 11:30</h5>
-                  <p>Keynote Speaking - Invited Professor 3</p>
+                  <h5 class="my-3 lang-en">11:00 - 11:30</h5>
+                  <h5 class="my-3 lang-zh">11:00 - 11:30</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 3</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 3</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="900">
-                  <h5 class="my-3">11:30 - 12:00</h5>
-                  <p>Keynote Speaking - Invited Professor 4</p>
+                  <h5 class="my-3 lang-en">11:30 - 12:00</h5>
+                  <h5 class="my-3 lang-zh">11:30 - 12:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 4</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 4</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="1000">
-                  <h5 class="my-3">12:00 - 13:30</h5>
-                  <p>Buffet Lunch</p>
+                  <h5 class="my-3 lang-en">12:00 - 13:30</h5>
+                  <h5 class="my-3 lang-zh">12:00 - 13:30</h5>
+                  <p class="lang-en">Buffet Lunch</p>
+                  <p class="lang-zh">自助午餐</p>
                 </div>
               </div>
               <div class="topic-header">
-                <h2>Afternoon Topic: Modeling and assessment of transport resilience</h2>
+                <h2 class="lang-en">Afternoon Topic: Modeling and assessment of transport resilience</h2>
+                <h2 class="lang-zh">下午主题: 交通韧性的建模与评估</h2>
               </div>
               <div class="timeline timeline-one">
                 <!-- Timeline Item 1 -->
                 <div class="timeline-item schedule-item" data-aos-delay="300">
-                  <h5 class="my-3">13:30 - 14:00</h5>
-                  <p>Keynote Speaking - Invited Professor 5</p>
+                  <h5 class="my-3 lang-en">13:30 - 14:00</h5>
+                  <h5 class="my-3 lang-zh">13:30 - 14:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 5</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 5</p>
                 </div>
                 <!-- Timeline Item 2 -->
                 <div class="timeline-item schedule-item" data-aos-delay="400">
-                  <h5 class="my-3">14:00 - 14:30</h5>
-                  <p>Keynote Speaking - Invited Professor 6</p>
+                  <h5 class="my-3 lang-en">14:00 - 14:30</h5>
+                  <h5 class="my-3 lang-zh">14:00 - 14:30</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 6</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 6</p>
                 </div>
                 <!-- Timeline Item 3 -->
                 <div class="timeline-item schedule-item" data-aos-delay="500">
-                  <h5 class="my-3">14:30 - 15:00</h5>
-                  <p>Keynote Speaking - Invited Professor 7</p>
+                  <h5 class="my-3 lang-en">14:30 - 15:00</h5>
+                  <h5 class="my-3 lang-zh">14:30 - 15:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 7</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 7</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="600">
-                  <h5 class="my-3">15:00 - 15:45</h5>
-                  <p>Tea Break</p>
+                  <h5 class="my-3 lang-en">15:00 - 15:45</h5>
+                  <h5 class="my-3 lang-zh">15:00 - 15:45</h5>
+                  <p class="lang-en">Tea Break</p>
+                  <p class="lang-zh">茶歇</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="700">
-                  <h5 class="my-3">15:45 - 16:15</h5>
-                  <p>Keynote Speaking - Invited Professor 8</p>
+                  <h5 class="my-3 lang-en">15:45 - 16:15</h5>
+                  <h5 class="my-3 lang-zh">15:45 - 16:15</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 8</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 8</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="800">
-                  <h5 class="my-3">16:15 - 16:45</h5>
-                  <p>Keynote Speaking - Invited Professor 9</p>
+                  <h5 class="my-3 lang-en">16:15 - 16:45</h5>
+                  <h5 class="my-3 lang-zh">16:15 - 16:45</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 9</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 9</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="900">
-                  <h5 class="my-3">16:45 - 17:15</h5>
-                  <p>Keynote Speaking - Invited Professor 10</p>
+                  <h5 class="my-3 lang-en">16:45 - 17:15</h5>
+                  <h5 class="my-3 lang-zh">16:45 - 17:15</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 10</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 10</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="1000">
-                  <h5 class="my-3">17:15 - 18:00</h5>
-                  <p>Roundtable Discussion: Modeling and Assessment of Transport Resilience</p>
+                  <h5 class="my-3 lang-en">17:15 - 18:00</h5>
+                  <h5 class="my-3 lang-zh">17:15 - 18:00</h5>
+                  <p class="lang-en">Roundtable Discussion: Modeling and Assessment of Transport Resilience</p>
+                  <p class="lang-zh">圆桌讨论: 交通韧性的建模与评估</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="1000">
-                  <h5 class="my-3">18:00 - 20:00</h5>
-                  <p>Welcome Banquet</p>
+                  <h5 class="my-3 lang-en">18:00 - 20:00</h5>
+                  <h5 class="my-3 lang-zh">18:00 - 20:00</h5>
+                  <p class="lang-en">Welcome Banquet</p>
+                  <p class="lang-zh">欢迎宴会</p>
                 </div>
               </div>
               <!--End of Timeline-->
             </div>
           </div>
-
-
         </div>
         <!-- End Schdule Day 1 -->
 
         <!-- Schdule Day 2 -->
-        <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-
+        <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2"  data-aos-delay="400">
           <div class="row mt-4">
             <div class="col-md-10 mx-auto">
               <!-- Timeline -->
               <div class="topic-header">
-                <h2>Morning topic: Improving transportation resilience and policies</h2>
+                <h2 class="lang-en">Morning topic: Improving transportation resilience and policies</h2>
+                <h2 class="lang-zh">上午主题: 改善交通韧性和政策</h2>
               </div>
               <div class="timeline timeline-one">
                 <!-- Timeline Item 1 -->
                 <div class="timeline-item schedule-item" data-aos-delay="300">
-                  <h5 class="my-3">09:00 - 09:30</h5>
-                  <p>Keynote Speaking - Invited Professor 11</p>
+                  <h5 class="my-3 lang-en">09:00 - 09:30</h5>
+                  <h5 class="my-3 lang-zh">09:00 - 09:30</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 11</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 11</p>
                 </div>
                 <!-- Timeline Item 2 -->
                 <div class="timeline-item schedule-item" data-aos-delay="400">
-                  <h5 class="my-3">09:30 - 10:00</h5>
-                  <p>Keynote Speaking - Invited Professor 12</p>
+                  <h5 class="my-3 lang-en">09:30 - 10:00</h5>
+                  <h5 class="my-3 lang-zh">09:30 - 10:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 12</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 12</p>
                 </div>
                 <!-- Timeline Item 3 -->
                 <div class="timeline-item schedule-item" data-aos-delay="500">
-                  <h5 class="my-3">10:00 - 10:15</h5>
-                  <p>Tea Break</p>
+                  <h5 class="my-3 lang-en">10:00 - 10:15</h5>
+                  <h5 class="my-3 lang-zh">10:00 - 10:15</h5>
+                  <p class="lang-en">Tea Break</p>
+                  <p class="lang-zh">茶歇</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="600">
-                  <h5 class="my-3">10:15 - 11:00</h5>
-                  <p>Roundtable Discussion: Improving Transport Resilience and Policies</p>
+                  <h5 class="my-3 lang-en">10:15 - 11:00</h5>
+                  <h5 class="my-3 lang-zh">10:15 - 11:00</h5>
+                  <p class="lang-en">Roundtable Discussion: Improving Transport Resilience and Policies</p>
+                  <p class="lang-zh">圆桌讨论: 改善交通韧性和政策</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="700">
-                  <h5 class="my-3">11:00 - 11:30</h5>
-                  <p>Keynote Speaking - Invited Professor 13 </p>
+                  <h5 class="my-3 lang-en">11:00 - 11:30</h5>
+                  <h5 class="my-3 lang-zh">11:00 - 11:30</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 13</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 13</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="800">
-                  <h5 class="my-3">11:30 - 12:00</h5>
-                  <p>Keynote Speaking - Invited Professor 14</p>
+                  <h5 class="my-3 lang-en">11:30 - 12:00</h5>
+                  <h5 class="my-3 lang-zh">11:30 - 12:00</h5>
+                  <p class="lang-en">Keynote Speaking - Invited Professor 14</p>
+                  <p class="lang-zh">主题演讲 - 受邀教授 14</p>
                 </div>
-
                 <div class="timeline-item schedule-item" data-aos-delay="900">
-                  <h5 class="my-3">12:00 - 12:15</h5>
-                  <p>Closing Ceremony and Summary</p>
+                  <h5 class="my-3 lang-en">12:00 - 12:15</h5>
+                  <h5 class="my-3 lang-zh">12:00 - 12:15</h5>
+                  <p class="lang-en">Closing Ceremony and Summary</p>
+                  <p class="lang-zh">闭幕式和总结</p>
                 </div>
               </div>
               <!--End of Timeline-->
             </div>
           </div>
-
         </div>
         <!-- End Schdule Day 2 -->
 
         <!-- Schdule Day 3 -->
-        <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3" data-aos-delay="400">
+        <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3" data-aos-delay="500">
           <div class="row mt-4">
             <div class="col-md-10 mx-auto">
               <div class="topic-header">
-                <h2>Additional Activities</h2>
+                <h2 class="lang-en">Additional Activities</h2>
+                <h2 class="lang-zh">额外活动</h2>
               </div>
               <!-- Timeline -->
               <div class="timeline timeline-one">
                 <!-- Timeline Item 1 -->
                 <div class="timeline-item schedule-item" data-aos-delay="300">
-                  <h5 class="my-3">Day 3</h5>
-                  <p>Visit Intelligent Transportation Companies in Beijing: Wanji technology and Baidu</p>
+                  <h5 class="my-3 lang-en">Day 3</h5>
+                  <h5 class="my-3 lang-zh">第三天</h5>
+                  <p class="lang-en">Visit Intelligent Transportation Companies in Beijing: Wanji technology and Baidu</p>
+                  <p class="lang-zh">访问北京智能交通公司: 万集科技和百度</p>
                 </div>
                 <!-- Timeline Item 2 -->
                 <div class="timeline-item schedule-item" data-aos-delay="400">
-                  <h5 class="my-3">Day 4</h5>
-                  <p>Visit the Mutianyu Great Wall in Beijing</p>
+                  <h5 class="my-3 lang-en">Day 4</h5>
+                  <h5 class="my-3 lang-zh">第四天</h5>
+                  <p class="lang-en">Visit the Mutianyu Great Wall in Beijing</p>
+                  <p class="lang-zh">参观北京慕田峪长城</p>
                 </div>
                 <!-- Timeline Item 3 -->
               </div>
               <!--End of Timeline-->
             </div>
           </div>
-
-
         </div>
-        <!-- End Schdule Day 1 -->
-
+        <!-- End Schdule Day 3 -->
 
       </div>
 
     </div>
 
   </section><!-- End Schedule Section -->
-
-  <!-- ======= Hotels Section ======= -->
+  <!-- ======= Submission Guidelines Section ======= -->
   <section id="guidelines" class="section">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Submission Guidelines</h2>
-        <p>Here is our conference guidelines</p>
+        <h2 class="lang-en">Submission Guidelines</h2>
+        <h2 class="lang-zh">提交指南</h2>
+        <p class="lang-en">Here is our conference guidelines</p>
+        <p class="lang-zh">以下是我们的会议指南</p>
       </div>
       <div class="row">
         <div class="content d-flex flex-column justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-          <p class="guideline-p">
-            Researchers, practitioners, from academia, industry, government and non-governmental organizations are invited to submit abstracts for presentation and/or papers in the conference topic areas.  Authors should indicate if the author plans to submit a full paper.   Please submit your abstract by email to:  <span>zhaozhang@buaa.edu.cn</span>
+          <p class="guideline-p lang-en">
+            Researchers, practitioners, from academia, industry, government and non-governmental organizations are invited to submit abstracts for presentation and/or papers in the conference topic areas. Authors should indicate if the author plans to submit a full paper. Please submit your abstract by email to: <span>zhaozhang@buaa.edu.cn</span>
+          </p>
+          <p class="guideline-p lang-zh">
+            邀请来自学术界、工业界、政府和非政府组织的研究人员和从业人员提交有关会议主题的摘要或论文。作者应注明是否计划提交全文。请通过电子邮件提交您的摘要至: <span>zhaozhang@buaa.edu.cn</span>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  <!-- ======= Speakers Section ======= -->
+  <!-- ======= Conference Organizers Section ======= -->
   <section id="speakers" class="speaker">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Conference Organizers</h2>
-        <p>For further inquiries, please contact: </p>
+        <h2 class="lang-en">Conference Organizers</h2>
+        <h2 class="lang-zh">会议组织者</h2>
+        <p class="lang-en">For further inquiries, please contact:</p>
+        <p class="lang-zh">如有进一步的疑问，请联系：</p>
       </div>
 
       <div class="row gy-5">
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/Zhangzhao.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Zhao Zhang, Ph.D., AICP</h4>
+            <h4 class="lang-en">Zhao Zhang, Ph.D., AICP</h4>
+            <h4 class="lang-zh">张钊</h4>
             <span>Email: zhaozhang@buaa.edu.cn</span>
-            <p>Associate Professor and Deputy Director,
-              Key Laboratory of Intelligent Transportation Technology and System,
-              School of Transportation Science, Beihang University</p>
+            <p class="lang-en">Associate Professor and Deputy Director, Key Laboratory of Intelligent Transportation Technology and System, School of Transportation Science and Engineering, Beihang University</p>
+            <p class="lang-zh">北京航空航天大学交通科学与工程学院副教授，智能交通技术与系统重点实验室副主任</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/wolshon.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Brian Wolshon, Ph.D., P.E., P.T.O.E.</h4>
+            <h4 class="lang-en">Brian Wolshon, Ph.D., P.E., P.T.O.E.</h4>
+            <h4 class="lang-zh">Brian Wolshon</h4>
             <span>Email: brianw@lsu.edu</span>
-            <p>Professor and Director,
-              Gulf Coast Research Center for
-              Evacuation and Transportation Resiliency
-              Louisiana State University</p>
+            <p class="lang-en">Professor and Director, Gulf Coast Research Center for Evacuation and Transportation Resiliency, Louisiana State University</p>
+            <p class="lang-zh">路易斯安那州立大学教授，疏散与交通韧性研究中心主任</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/Yubin.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Bin Yu, Professor</h4>
+            <h4 class="lang-en">Bin Yu, Professor</h4>
+            <h4 class="lang-zh">于滨</h4>
             <span>Email: yubinyb@buaa.edu.cn</span>
-            <p>Professor and Director,
-              Laboratory of Intelligent Transportation Technology  and System,
-              School of Transportation Science, Beihang University
-            </p>            </div>
+            <p class="lang-en">Professor and Director, Laboratory of Intelligent Transportation Technology and System, School of Transportation Science and Engineering, Beihang University.<br>National Outstanding Youth Fund Winner</p>
+            <p class="lang-zh">北京航空航天大学交通科学与工程学院教授，智能交通技术与系统实验室主任，国家杰出青年基金获得者</p>
+          </div>
         </div><!-- End Team Member -->
+
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
           <div class="member-img">
             <img src="assets/img/speakers/wangweiping.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Weiping Wang, Ph.D.</h4>
+            <h4 class="lang-en">Weiping Wang, Ph.D.</h4>
+            <h4 class="lang-zh">汪伟平博士</h4>
             <span>Email: wangweiping0@gmail.com</span>
-            <p>Associate Professor,
-              School of National Safety and Emergency Management,
-              Beijing Normal University
-            </p>            </div>
+            <p class="lang-en">Associate Professor, School of National Safety and Emergency Management, Beijing Normal University</p>
+            <p class="lang-zh">副教授，北京师范大学国家安全与应急管理学院</p>
+          </div>
         </div><!-- End Team Member -->
       </div>
     </div>
+  </section><!-- End Conference Organizers Section -->
 
-  </section><!-- End Speakers Section -->
 
-
-  <!-- ======= Gallery Section ======= -->
   <!-- ======= Supporters Section ======= -->
   <section id="attendees" class="speaker section-with-bg">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Guest Attendees</h2>
-        <p>For further inquiries, please contact: </p>
+        <h2 class="lang-en">Guest Attendees</h2>
+        <h2 class="lang-zh">嘉宾出席者</h2>
+        <p class="lang-en">Guests invited to attend the meeting:</p>
+        <p class="lang-zh">受邀出席会议的嘉宾:</p>
       </div>
 
       <div class="row gy-5">
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/Ahmed Mebarki.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Ahmed Mebarki</h4>
+            <h4 class="lang-en">Ahmed Mebarki</h4>
+            <h4 class="lang-zh">Ahmed Mebarki</h4>
             <span>Email: Ahmed.Mebarki@u-pem.fr</span>
-            <p>Full Professor of University Gustave Eiffel,
-              Head of Institute of Technology at University Gustave Eiffel & (Co-founder + CSO SU Deeptech)</p>
+            <p class="lang-en">Full Professor of University Gustave Eiffel, Head of Institute of Technology at University Gustave Eiffel & (Co-founder + CSO SU Deeptech)</p>
+            <p class="lang-zh">古斯塔夫·埃菲尔大学教授，古斯塔夫·埃菲尔大学技术学院院长，(SU Deeptech 的联合创始人和首席科学官)</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/Vinayak%20Dixit.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Vinayak Dixit</h4>
+            <h4 class="lang-en">Vinayak Dixit</h4>
+            <h4 class="lang-zh">Vinayak Dixit</h4>
             <span>Email: v.dixit@unsw.edu.au</span>
-            <p>Professor of Transport Systems in the School of Civil and Environmental Engineering at the University of New South Wales </p>
+            <p class="lang-en">Professor of Transport Systems in the School of Civil and Environmental Engineering at the University of New South Wales</p>
+            <p class="lang-zh">新南威尔士大学土木与环境工程学院运输系统教授</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/Milad%20Haghani.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Milad Haghani</h4>
+            <h4 class="lang-en">Milad Haghani</h4>
+            <h4 class="lang-zh">Milad Haghani</h4>
             <span>Email: milad.haghani@unsw.edu.au</span>
-            <p>Senior Lecturer and an Australian Research Council DECRA Fellow at the School of Civil and Environmental Engineering of UNSW Sydney
-            </p></div>
+            span>
+            <p class="lang-en">Senior Lecturer and an Australian Research Council DECRA Fellow at the School of Civil and Environmental Engineering of UNSW Sydney</p>
+            <p class="lang-zh">新南威尔士大学悉尼分校土木与环境工程学院高级讲师，澳大利亚研究理事会DECRA研究员</p>
+          </div>
         </div><!-- End Team Member -->
+
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
           <div class="member-img">
             <img src="assets/img/speakers/Albert%20Solé%20Ribalta.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Albert Solé Ribalta</h4>
+            <h4 class="lang-en">Albert Solé Ribalta</h4>
+            <h4 class="lang-zh">Albert Solé Ribalta</h4>
             <span>Email: asolerib@uoc.edu</span>
-            <p>Professor of Big Data analysis and technologies and Machine Learning at the Universitat Oberta de Catalunya, <br>Forms part of the CoSIN3 research group,
-              <br>Elected member of the council of the Complex System Society
-            </p>    </div>
+            <p class="lang-en">Professor of Big Data analysis and technologies and Machine Learning at the Universitat Oberta de Catalunya, Forms part of the CoSIN3 research group, Elected member of the council of the Complex System Society</p>
+            <p class="lang-zh">加泰罗尼亚开放大学大数据分析与技术和机器学习教授，CoSIN3研究小组成员，复杂系统学会理事会成员</p>
+          </div>
         </div><!-- End Team Member -->
       </div>
+
       <div class="row">
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/Javier%20Borge-Holthoefer.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Javier Borge-Holthoefer</h4>
+            <h4 class="lang-en">Javier Borge-Holthoefer</h4>
+            <h4 class="lang-zh">Javier Borge-Holthoefer</h4>
             <span>Email: jborgeh@uoc.edu</span>
-            <p>Ramón y Cajal fellow, <br>
-              Leading the Complex Systems group at the Internet Interdisciplinary Institute (IN3, Universitat Oberta de Catalunya)</p>
+            <p class="lang-en">Ramón y Cajal fellow, Leading the Complex Systems group at the Internet Interdisciplinary Institute (IN3, Universitat Oberta de Catalunya)</p>
+            <p class="lang-zh">Ramón y Cajal研究员，领导加泰罗尼亚开放大学互联网跨学科研究所（IN3）的复杂系统组</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/GangRen.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Gang Ren</h4>
-            <span>Email: rengang@seu.edu.cn</span>
-            <p>Professor in Transportation Engineering and the director of the Major Projects,<br>
-              Collaborative Innovation Office of the university</p>
+            <h4 class="lang-en">Gang Ren</h4>
+            <h4 class="lang-zh">任刚</h4>
+            <span>Email: rengang@seu.edu.cn</span><p class="lang-en">Distinguished Professor of School of Transportation,Director of Transportation Engineering Department, Southeast University</p>
+            <p class="lang-zh">东南大学交通学院特聘教授，交通工程系主任</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/KarlKim.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Karl Kim</h4>
+            <h4 class="lang-en">Karl Kim</h4>
+            <h4 class="lang-zh">金卡尔</h4>
             <span>Email: karlk@hawaii.edu</span>
-            <p>Professor of urban and regional planning at the University of Hawaii at Manoa,<br>
-              Director of the graduate program in disaster management and humanitarian assistance,<br>
-              Editor-in-chief of Transportation Research: Interdiscplinary Perspectives,<br>
-              Associate Editor of Transportation Research, Part D, Transport and Enviroment
-            </p>    </div>
+            <p class="lang-en">Professor of urban and regional planning at the University of Hawaii at Manoa, Director of the graduate program in disaster management and humanitarian assistance, Editor-in-chief of Transportation Research: Interdisciplinary Perspectives, Associate Editor of Transportation Research, Part D, Transport and Environment</p>
+            <p class="lang-zh">夏威夷大学马诺阿分校城市与区域规划教授，灾害管理与人道主义援助研究生项目主任，《Transport and Environment：Interdisciplinary Perspectives》主编，《Transportation Research, Part D, Transport and Environment》副主编</p>
+          </div>
         </div><!-- End Team Member -->
+
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
           <div class="member-img">
             <img src="assets/img/speakers/XiaoboLiu.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Xiaobo Liu</h4>
+            <h4 class="lang-en">Xiaobo Liu</h4>
+            <h4 class="lang-zh">刘晓波</h4>
             <span>Email: xiaobo.liu@swjtu.cn</span>
-            <p>Professor,Dean of the school of transportation and logistics in Southwest Jiaotong University
-            </p>    </div>
+            <p class="lang-en">Professor, Dean of the school of transportation and logistics in Southwest Jiaotong University</p>
+            <p class="lang-zh">西南交通大学交通运输与物流学院院长，教授</p>
+          </div>
         </div><!-- End Team Member -->
       </div>
 
@@ -603,150 +687,135 @@
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/mengli.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Meng Li</h4>
+            <h4 class="lang-en">Meng Li</h4>
+            <h4 class="lang-zh">李萌</h4>
             <span>Email: mengli@tsinghua.edu.cn</span>
-            <p>Professor, Ph.D. Supervisor, Tsinghua University Department of Civil Engineering<br></p>
+            <p class="lang-en">Professor, Ph.D. Supervisor, Tsinghua University Department of Civil Engineering</p>
+            <p class="lang-zh">清华大学土木工程系教授，博士生导师</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/jiaoewang.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Jiaoe Wang</h4>
+            <h4 class="lang-en">Jiaoe Wang</h4>
+            <h4 class="lang-zh">王姣娥</h4>
             <span>Email: jiaoewang@163.com</span>
-            <p>Professor, Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences,<br>
-              University of Chinese Academy of Sciences
-            </p>
+            <p class="lang-en">Director of Economic Geography and Regional Development Research Office, Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, Distinguished Researcher, Chinese Academy of Sciences</p>
+            <p class="lang-zh">中国科学院地理科学与资源研究所经济地理与区域发展研究室主任，中国科学院特聘研究员</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/clj.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Jiancheng Long</h4>
+            <h4 class="lang-en">Jiancheng Long</h4>
+            <h4 class="lang-zh">龙建成</h4>
             <span>Email: jianchenglong@hfut.edu.cn</span>
-            <p>Dean of the School of Automotive and Transportation Engineering,  <br> Hefei University of Technology<br>.
-            </p>
+            <p class="lang-en">Professor, Dean of the School of Automotive and Transportation Engineering, Hefei University of Technology</p>
+            <p class="lang-zh">合肥工业大学汽车与交通工程学院教授， 院长</p>
           </div>
         </div><!-- End Team Member -->
-        <!-- -->
+
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/jiansun.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Sun, Jian</h4>
+            <h4 class="lang-en">Sun, Jian</h4>
+            <h4 class="lang-zh">孙剑</h4>
             <span>Email: sunjian@tongji.edu.cn</span>
-            <p>Ph.D. Professor, <br>
-              Deparment of Traffic Engineering, Tongji University
-            </p>    </div>
+            <p class="lang-en">Professor, Dean of Transportation Engineering Department, Tongji University， has been selected for the National Natural Science Foundation of China Excellent Youth Fund, the Ministry of Education Young Yangtze River Scholars Program and other talent programs</p>
+            <p class="lang-zh">同济大学交通工程系教授、主任，先后入选国家自然基金委优秀青年基金、教育部青年长江学者等人才计划</p>
+          </div>
         </div><!-- End Team Member -->
-
-
       </div>
-
 
       <div class="row">
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/mawenjian.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Wenjian Ma</h4>
+            <h4 class="lang-en">Wanjing Ma</h4>
+            <h4 class="lang-zh">马万经</h4>
             <span>Email: mawanjing@tongji.edu.cn</span>
-            <p>Professor, Head of the Department of Transportation Information and Control Engineering
-              Tongji University<br>
-              Active member of Transportation Research Board and World Conference on Transport Research Society</p>
+            <p class="lang-en">Professor, Vice Dean, of the School of Transportation Engineering, Tongji University, Active member of Transportation Research Board and World Conference on Transport Research Society</p>
+            <p class="lang-zh">同济大学交通运输工程学院党委书记、副院长、教授</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
             <img src="assets/img/speakers/yangmin.png" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Min Yang</h4>
-            <span>Email: yangmin@seu.edu.cn</span>
-            <p>Professor, <br> Vice Dean of School of Transportation,<br> Southeast University </br>.
-            </p>
+            <h4 class="lang-en">Min Yang</h4>
+            <h4 class="lang-zh">杨敏</h4>
+            <span>Email: yangmin@seu.edu.cn</span><p class="lang-en">Vice Dean of the School of Transportation, Southeast University, Professor, Selected for the National Youth Talent Program</p>
+            <p class="lang-zh">东南大学交通学院副院长，教授, 入选国家级青年人才计划</p>
           </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/xuzhigang.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Zhigang Xu</h4>
+            <h4 class="lang-en">Zhigang Xu</h4>
+            <h4 class="lang-zh">徐志刚</h4>
             <span>Email: xuzhigang@chd.edu.cn</span>
-            <p>Professor, <br>
-              Vice Dean of the School of Information Engineering, Chang'an University<br>
-            </p>    </div>
+
+            <p class="lang-en">Leading Professor of “Chang’an Scholars”, Vice Dean of the School of Information Engineering, Chang'an University</p>
+            <p class="lang-zh">长安大学信息工程学院副院长，“长安学者”领军教授</p>
+          </div>
         </div><!-- End Team Member -->
 
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
             <img src="assets/img/speakers/dqli.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Daqing Li</h4>
+            <h4 class="lang-en">Daqing Li</h4>
+            <h4 class="lang-zh">李大庆</h4>
             <span>Email: xuzhigang@chd.edu.cn</span>
-            <p>ResearcheR, Doctoral supervisor,<br>
-              Beihang University<br>
-            </p>    </div>
+
+            <p class="lang-en">Researcher, Doctoral supervisor, Beihang University</p>
+            <p class="lang-zh">北京航空航天大学研究员，博士生导师</p>
+          </div>
         </div><!-- End Team Member -->
-
-
       </div>
 
       <div class="row">
         <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
             <img src="assets/img/speakers/jjwu.jpg" class="img-fluid" alt="">
-
           </div>
           <div class="member-info text-center">
-            <h4>Jianjun Wu</h4>
+            <h4 class="lang-en">Jianjun Wu</h4>
+            <h4 class="lang-zh">吴建军</h4>
             <span>Email: jjwu1@bjtu.edu.cn</span>
-            <p>Professor, Doctoral supervisor, <br>
-              Beijing Jiaotong University<br>
+            <p class="lang-en">Professor, Doctoral supervisor, Beijing Jiaotong University, National Outstanding Young Scientist Fund Winner</p>
+            <p class="lang-zh">北京交通大学教授，博士生导师, 国家杰出青年科学基金获得者</p>
           </div>
         </div><!-- End Team Member -->
-
-
-
       </div>
 
     </div>
-
   </section><!-- End Speakers Section -->
-
-  <!-- =======  F.A.Q Section ======= -->
-
-  <!-- ======= Subscribe Section ======= -->
-
-  <!-- ======= Buy Ticket Section ======= -->
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact section-with-bg">
     <div class="container" data-aos="fade-up">
-
       <div class="section-header">
-        <h2>Conference Venue</h2>
+        <h2 class="lang-en">Conference Venue</h2>
+        <h2 class="lang-zh">会议地点</h2>
         <p></p>
       </div>
 
@@ -754,31 +823,33 @@
         <div class="col-lg-6">
           <div class="info-box mb-4">
             <i class="bi bi-geo-alt"></i>
-            <h3>The Address</h3>
-            <p>39 Xueyuan Road, Haidian District, Beijing, P.R. China</p>
+            <h3 class="lang-en">The Address</h3>
+            <h3 class="lang-zh">地址</h3>
+            <p class="lang-en">39 Xueyuan Road, Haidian District, Beijing, P.R. China</p>
+            <p class="lang-zh">中国北京市海淀区学院路37号</p>
           </div>
         </div>
 
-
-
         <div class="col-lg-3 col-md-6">
-          <div class="info-box  mb-4">
+          <div class="info-box mb-4">
             <i class="bi bi-house-door-fill"></i>
-            <h3>Host school</h3>
-            <p>Beihang University</p>
+            <h3 class="lang-en">Host School</h3>
+            <h3 class="lang-zh">主办学校</h3>
+            <p class="lang-en">Beihang University</p>
+            <p class="lang-zh">北京航空航天大学</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <a src="http://en.beijingvision.cn/">
-            <div class="info-box  mb-4">
+          <a href="http://en.beijingvision.cn/">
+            <div class="info-box mb-4">
               <i class="bi bi-box-arrow-up-right"></i>
-              <h3>Venue Website</h3>
+              <h3 class="lang-en">Venue Website</h3>
+              <h3 class="lang-zh">会场网站</h3>
               <p>http://en.beijingvision.cn/</p>
             </div>
           </a>
         </div>
-
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -788,33 +859,34 @@
         <div class="col-lg-6 venue-info">
           <div class="row justify-content-center">
             <div class="col-11 col-lg-8 position-relative">
-              <h3>Vision International Culture Exchange Center</h3>
-              <p>Vision International Culture Exchange Center is one of the landmark buildings of Beihang University. The building adopts a modern architectural style and embodies the concepts of high technology, environmental protection and humanization.</p>
+              <h3 class="lang-en">Vision International Culture Exchange Center</h3>
+              <h3 class="lang-zh">唯实国际文化交流中心</h3>
+              <p class="lang-en">Vision International Culture Exchange Center is one of the landmark buildings of Beihang University. The building adopts a modern architectural style and embodies the concepts of high technology, environmental protection and humanization.</p>
+              <p class="lang-zh">唯实国际文化交流中心是北京航空航天大学的地标性建筑之一。该建筑采用现代建筑风格，体现了高科技、环保和人性化的理念。</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section><!-- End Contact Section -->
 
   <!-- ======= Hotels Section ======= -->
   <section id="hotels" class="section-with-bg">
-
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>restaurant recommendation</h2>
-        <p>Here are some nearby restaurants</p>
+        <h2 class="lang-en">Restaurant Recommendations</h2>
+        <h2 class="lang-zh">餐馆推荐</h2>
+        <p class="lang-en">Here are some nearby restaurants</p>
+        <p class="lang-zh">以下是一些附近的餐馆</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
-
         <div class="col-lg-4 col-md-6">
           <div class="hotel">
             <div class="hotel-img">
               <img src="assets/img/venue-gallery/1.png" alt="Hotel 1" class="img-fluid">
             </div>
-            <h3><a href="#">Annie's Ristorante italiano</a></h3>
+            <h3><a href="#">Annie's Ristorante Italiano</a></h3>
             <div class="stars">
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
@@ -822,7 +894,8 @@
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
             </div>
-            <p>2 Mile from the Venue</p>
+            <p class="lang-en">2 miles from the Venue</p>
+            <p class="lang-zh">距会场2英里</p>
           </div>
         </div>
 
@@ -837,9 +910,10 @@
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill-half-full"></i>
+              <i class="bi bi-star-fill"></i>
             </div>
-            <p>2 Mile from the Venue</p>
+            <p class="lang-en">2 miles from the Venue</p>
+            <p class="lang-zh">距会场2英里</p>
           </div>
         </div>
 
@@ -854,14 +928,14 @@
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
               <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
             </div>
-            <p>2 Mile from the Venue</p>
+            <p class="lang-en">2 miles from the Venue</p>
+            <p class="lang-zh">距会场2英里</p>
           </div>
         </div>
-
       </div>
     </div>
-
   </section><!-- End Hotels Section -->
 
 
@@ -869,17 +943,18 @@
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
+
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong>ICTRM</strong>. All Rights Reserved
+      &copy; Copyright <strong><span>ICTRM</span></strong>. All Rights Reserved
     </div>
-
   </div>
-</footer><!-- End  Footer -->
+</footer><!-- End Footer -->
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -888,11 +963,6 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-<script src="assets/js/map.js"></script>
-<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=LDrdZ6nRi8DM1uOOL5dZawvuEi08As7C"></script>
+
 </body>
-
 </html>
-
-
-
